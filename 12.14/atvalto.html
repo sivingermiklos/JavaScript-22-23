@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <title>JavaScript 4.2 - Mértékegység átváltás</title>
+        
+        <script>
+            function atvalt() {
+                var m = parseFloat(document.getElementById("m").value)
+                
+                document.getElementById("lab").value = (m*3.28);
+                document.getElementById("merfold").value = (m/1610);
+                document.getElementById("km").value = (m/1000);
+                document.getElementById("yard").value = (m*1.09);
+                document.getElementById("inch").value = (m*39.37);
+            }
+        </script>
+        
+    </head>
+    <body>
+        <div class="container">
+             <h1 class="text-center p-3 my-3">Mértékegység átváltás JavaScript</h1>
+            <div class="d-flex justify-content-center">
+                <form class="w-50 d-flex flex-column justify-content-center text-center border rounded p-5">
+                    <h3 class="text-center">Méter: </h3>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" id="m">
+                        <span class="input-group-text">méter</span>
+                      </div>
+                      <h5 class="text-center mt-4">Átváltott értékek:</h5>
+                      <div class="input-group mb-3">
+                        <input class="form-control" id="lab" disabled>
+                        <span class="input-group-text">láb</span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input class="form-control" id="merfold" disabled>
+                        <span class="input-group-text">mérföld</span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input class="form-control" id="km" disabled>
+                        <span class="input-group-text">kilométer</span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input class="form-control" id="yard" disabled>
+                        <span class="input-group-text">yard</span>
+                      </div>
+                      <div class="input-group mb-3">
+                        <input class="form-control" id="inch" disabled>
+                        <span class="input-group-text">inch</span>
+                      </div>
+                    <button type="button" class="btn btn-primary" onclick="atvalt()">Átvált</button>
+                </form>
+                
+            </div>
+        </div>
+    </body>
+</html>
